@@ -12,6 +12,6 @@ cc_library(
   ],
   strip_include_prefix = 'include/',
   hdrs = [
-    "include/Persistence.h"
+    "include/mindpowered/persistence/Persistence.h"
   ]
 )
