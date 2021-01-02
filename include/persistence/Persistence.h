@@ -16,7 +16,7 @@ class Persistence_obj
 {
 public:
     Persistence_obj();
-    __construct(::maglev::MagLev);
+    void __construct(::maglev::MagLev);
 };
 
 class Persistence
