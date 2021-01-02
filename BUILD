@@ -7,11 +7,12 @@ cc_library(
     '@maglev//:maglev',
   ],
   srcs = [
-    "src/Persistence.cpp",
-    "include/Persistence.h"
+    "src/persistence/Persistence.cpp",
+    "include/persistence/Persistence.h"
   ],
   strip_include_prefix = 'include/',
   hdrs = [
-    "include/mindpowered/persistence/Persistence.h"
+    "include/persistence/Persistence.h",
+    "include/mindpowered/persistence/Persistence.h",
   ]
 )

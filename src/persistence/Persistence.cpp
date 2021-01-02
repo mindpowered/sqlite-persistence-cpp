@@ -11,7 +11,7 @@
 #include <haxecpp/haxe_thread.h>
 #include <vector>
 #include <stdexcept>
-#include "Persistence.h"
+#include "persistence/Persistence.h"
 
 namespace persistence{
 
