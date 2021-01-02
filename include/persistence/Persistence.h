@@ -5,10 +5,19 @@
  * https://mindpowered.dev/
  */
 
+void __boot_persistence();
+
 namespace persistence{
 
 #include <maglev/MagLev.h>
 #include <maglev/MagLevCpp.h>
+
+class Persistence_obj
+{
+public:
+    Persistence_obj();
+    __construct(::maglev::MagLev);
+};
 
 class Persistence
 {
