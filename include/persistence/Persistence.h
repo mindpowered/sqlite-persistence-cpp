@@ -12,13 +12,6 @@ namespace persistence{
 #include <maglev/MagLev.h>
 #include <maglev/MagLevCpp.h>
 
-class Persistence_obj
-{
-public:
-    Persistence_obj();
-    void __construct(::maglev::MagLev);
-};
-
 class Persistence
 {
 private:
@@ -29,6 +22,15 @@ public:
 private:
     void registerMyMethods(::maglev::MagLevCpp);
     void regNoImpl(std::string, ::maglev::MagLevCpp);
+};
+
+class Persistence_obj
+{
+public:
+    Persistence_obj();
+    void __construct(::maglev::MagLev);
+private:
+    Persistence* _persistence;
 };
 
 }//namespace persistence

@@ -48,7 +48,11 @@ public:
 			::maglev::MagLevCpp bus = ::maglev::MagLevCpp_obj::getInstance("default");
 			std::vector<::maglev::CppAny> myargs;
 			::maglev::CppAny param0 = new ::maglev::CppAny_obj();
-			param0->setMap(obj);
+			param0->makeMap();
+			for (auto const& item : param0)
+			{
+				param0->setMapValue(item.first, item.second);
+			}
 			myargs.push_back(param0);
 			bus->call("Persistence.EnglishAuction.Auction.CreateNew", myargs, [&ret] (::maglev::CppAny async_ret) { ret = async_ret; });
 		});
