@@ -49,7 +49,7 @@ public:
 			std::vector<::maglev::CppAny> myargs;
 			::maglev::CppAny param0 = new ::maglev::CppAny_obj();
 			param0->makeMap();
-			for (auto const& item : param0)
+			for (auto const& item : obj)
 			{
 				param0->setMapValue(item.first, item.second);
 			}

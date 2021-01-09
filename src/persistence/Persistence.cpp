@@ -53,9 +53,9 @@ void Persistence::registerMyMethods(::maglev::MagLevCpp cppbus)
 void Persistence::regNoImpl(std::string method, ::maglev::MagLevCpp cppbus)
 {
     ::maglev::MagLevCpp cppbus2 = cppbus;
-    cppbus->_hx_register(method, [&cppbus2, method](std::vector<::maglev::CppAny> args) -> ::maglev::CppAny {
+    cppbus->_hx_register(method, [cppbus2, method](std::vector<::maglev::CppAny> args) -> ::maglev::CppAny {
         ::maglev::MagLevCpp cppbus3 = cppbus2;
-        run_haxe([&cppbus3, method](){
+        run_haxe([cppbus3, method](){
             ::maglev::MagLevCpp cppbus4 = cppbus3;
             std::vector<::maglev::CppAny> myargs;
             ::maglev::CppAny myarg0 = new ::maglev::CppAny_obj();
